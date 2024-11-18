@@ -33,8 +33,9 @@
 
 
   <script src="js/add-element.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyAzcwgZuLA7dO9g4sQhXQVTUgCo0M8m2qM",
@@ -47,8 +48,9 @@
       measurementId: "G-VZ83BTR72T"
     }; 
     // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
+      const firebaseApp = firebase.initializeApp(firebaseConfig);
       const db = firebase.firestore();
+      const auth = firebaseApp.auth();
 
     // Save the list to database
 
